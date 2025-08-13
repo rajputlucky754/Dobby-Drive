@@ -1,0 +1,37 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121937;
+  --muted: #aab3d9;
+  --text: #eaf0ff;
+  --accent: #6ea8ff;
+  --good: #3ddc97;
+  --danger: #ff6b6b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Segoe UI, Roboto, sans-serif; color: var(--text); background: linear-gradient(180deg, #0b1020, #0e1742); min-height: 100vh; }
+a { color: var(--text); text-decoration: none; }
+button, input, select { font: inherit; }
+button { background: var(--accent); color: #0b1020; border: 0; padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+button.ghost { background: transparent; border: 1px solid var(--muted); color: var(--text); }
+input, select { background: #0f1633; color: var(--text); border: 1px solid #1c2552; padding: 10px 12px; border-radius: 10px; }
+.container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+.card { background: var(--panel); border: 1px solid #1c2552; border-radius: 16px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.nav { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #1c2552; position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,16,32,0.7); }
+.brand { font-weight: 700; letter-spacing: 0.5px; }
+.spacer { flex: 1; }
+.row { display: flex; align-items: center; gap: 8px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.grid { display: grid; gap: 12px; }
+.grid.images { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.folder { padding: 10px; border-radius: 12px; border: 1px dashed #2a3472; cursor: pointer; background: #0f1633; }
+.folder:hover { border-color: var(--accent); }
+.image { background: #0f1633; border: 1px solid #1c2552; border-radius: 12px; overflow: hidden; }
+.image img { width: 100%; height: 140px; object-fit: cover; display: block; }
+.image .meta { padding: 8px; font-size: 14px; color: var(--muted); }
+.actions { display: flex; gap: 8px; }
+.breadcrumbs { display: flex; gap: 6px; align-items: center; margin-bottom: 12px; color: var(--muted); }
+.muted { color: var(--muted); }
+.sidebar { width: 260px; }
+.layout { display: grid; grid-template-columns: 260px 1fr; gap: 16px; }
+.search { display: flex; gap: 8px; margin-bottom: 12px; }
+hr.sep { border: 0; border-top: 1px solid #1c2552; margin: 12px 0; }
